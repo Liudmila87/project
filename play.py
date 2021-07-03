@@ -71,25 +71,25 @@ def win_check():
     return False
 
 
-def corn():
-    turn = 0
-    while True:
-     turn += 1
+count = 0
+while True:
+    count += 1
     show()
-    if turn % 2 == 1:
-        print("Ходит крестик")
+    if count % 2 == 1:
+        print(" Ходит крестик!")
     else:
-        print("Ходит нолик")
+        print(" Ходит нолик!")
     x, y = input_check()
-    if turn % 2 == 1:
+    if count % 2 == 1:
         field[x][y] = "X"
     else:
-        field[x][y] = "O"
+        field[x][y] = "0"
+
     if win_check():
         break
-    if turn == 9:
-        print(" ")
-        print("Ничья")
+
+    if count == 9:
+        print(" Ничья!")
         break
 
 
